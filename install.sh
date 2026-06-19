@@ -98,3 +98,33 @@ register_agent "openclaw" \
   'clawhub install ponytail 2>/dev/null || true
    green "  ✓ OpenClaw: skill installed."' \
   "OpenClaw"
+
+# ── File-copy helpers ───────────────────────────────────────────────
+
+copy_rule() {
+  local src="$1" dst="$2"
+  mkdir -p "$(dirname "$dst")"
+  cp "$PONYTAIL_DIR/$src" "$dst"
+  green "  ✓ $3"
+}
+
+# ── Agent: Cursor ────────────────────────────────────────────────────
+
+register_agent "cursor" \
+  'return 0' \
+  'copy_rule ".cursor/rules/ponytail.mdc" ".cursor/rules/ponytail.mdc" "Cursor: rule copied to .cursor/rules/ponytail.mdc"' \
+  "Cursor"
+
+# ── Agent: Windsurf ──────────────────────────────────────────────────
+
+register_agent "windsurf" \
+  'return 0' \
+  'copy_rule ".windsurf/rules/ponytail.md" ".windsurf/rules/ponytail.md" "Windsurf: rule copied to .windsurf/rules/ponytail.md"' \
+  "Windsurf"
+
+# ── Agent: Cline ─────────────────────────────────────────────────────
+
+register_agent "cline" \
+  'return 0' \
+  'copy_rule ".clinerules/ponytail.md" ".clinerules/ponytail.md" "Cline: rule copied to .clinerules/ponytail.md"' \
+  "Cline"
