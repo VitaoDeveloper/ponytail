@@ -128,3 +128,25 @@ register_agent "cline" \
   'return 0' \
   'copy_rule ".clinerules/ponytail.md" ".clinerules/ponytail.md" "Cline: rule copied to .clinerules/ponytail.md"' \
   "Cline"
+
+# ── Agent: Kiro ──────────────────────────────────────────────────────
+# ponytail: project-local copy; --kiro-global for ~/.kiro/steering/
+
+register_agent "kiro" \
+  'return 0' \
+  'copy_rule ".kiro/steering/ponytail.md" ".kiro/steering/ponytail.md" "Kiro: rule copied to .kiro/steering/ponytail.md"' \
+  "Kiro (project)"
+
+# ── Agent: Copilot (editor) ──────────────────────────────────────────
+
+register_agent "copilot-editor" \
+  'return 0' \
+  'copy_rule ".github/copilot-instructions.md" ".github/copilot-instructions.md" "Copilot editor: instructions copied to .github/copilot-instructions.md"' \
+  "Copilot (editor)"
+
+# ── Agent: CodeWhale ─────────────────────────────────────────────────
+
+register_agent "codewhale" \
+  'return 0' \
+  'copy_rule "AGENTS.md" "AGENTS.md" "CodeWhale: AGENTS.md copied to project root"' \
+  "CodeWhale"
