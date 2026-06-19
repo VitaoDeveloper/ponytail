@@ -49,3 +49,11 @@ register_agent "claude" \
    claude /plugin install ponytail@ponytail 2>/dev/null || true
    green "  ✓ Claude Code: plugin installed. If using the desktop app, install from the UI instead (see README)."' \
   "Claude Code"
+
+# ── Agent: Codex ─────────────────────────────────────────────────────
+
+register_agent "codex" \
+  'command -v codex &>/dev/null' \
+  'codex plugin marketplace add DietrichGebert/ponytail 2>/dev/null || true
+   green "  ✓ Codex: plugin marketplace added. Open Codex, go to /plugins, install Ponytail, then review hooks at /hooks."' \
+  "Codex"
