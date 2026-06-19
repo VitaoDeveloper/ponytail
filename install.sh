@@ -66,3 +66,19 @@ register_agent "copilot" \
    copilot plugin install ponytail@ponytail 2>/dev/null || true
    green "  ✓ Copilot CLI: plugin installed. Use /ponytail:ponytail to switch levels."' \
   "Copilot CLI"
+
+# ── Agent: Gemini CLI ──────────────────────────────────────────────
+
+register_agent "gemini" \
+  'command -v gemini &>/dev/null' \
+  'gemini extensions install https://github.com/DietrichGebert/ponytail 2>/dev/null || true
+   green "  ✓ Gemini CLI: extension installed. Runs ponytail as always-on context."' \
+  "Gemini CLI"
+
+# ── Agent: Antigravity CLI ──────────────────────────────────────────
+
+register_agent "antigravity" \
+  'command -v agy &>/dev/null' \
+  'agy plugin install https://github.com/DietrichGebert/ponytail 2>/dev/null || true
+   green "  ✓ Antigravity CLI: extension installed. Use /ponytail commands in chat."' \
+  "Antigravity CLI"
