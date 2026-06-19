@@ -57,3 +57,12 @@ register_agent "codex" \
   'codex plugin marketplace add DietrichGebert/ponytail 2>/dev/null || true
    green "  ✓ Codex: plugin marketplace added. Open Codex, go to /plugins, install Ponytail, then review hooks at /hooks."' \
   "Codex"
+
+# ── Agent: Copilot CLI ─────────────────────────────────────────────
+
+register_agent "copilot" \
+  'command -v copilot &>/dev/null' \
+  'copilot plugin marketplace add DietrichGebert/ponytail 2>/dev/null || true
+   copilot plugin install ponytail@ponytail 2>/dev/null || true
+   green "  ✓ Copilot CLI: plugin installed. Use /ponytail:ponytail to switch levels."' \
+  "Copilot CLI"
