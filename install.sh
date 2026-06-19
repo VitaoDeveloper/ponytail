@@ -82,3 +82,19 @@ register_agent "antigravity" \
   'agy plugin install https://github.com/DietrichGebert/ponytail 2>/dev/null || true
    green "  ✓ Antigravity CLI: extension installed. Use /ponytail commands in chat."' \
   "Antigravity CLI"
+
+# ── Agent: Pi ────────────────────────────────────────────────────────
+
+register_agent "pi" \
+  'command -v pi &>/dev/null' \
+  'pi install git:github.com/DietrichGebert/ponytail 2>/dev/null || true
+   green "  ✓ Pi: extension installed."' \
+  "Pi"
+
+# ── Agent: OpenClaw ──────────────────────────────────────────────────
+
+register_agent "openclaw" \
+  'command -v clawhub &>/dev/null' \
+  'clawhub install ponytail 2>/dev/null || true
+   green "  ✓ OpenClaw: skill installed."' \
+  "OpenClaw"
